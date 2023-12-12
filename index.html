@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1524169358666-79f22534bc6e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBvcnRmb2xpbyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            text-align: left;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .h1 {
+            color: white;
+            text-align: center;
+            font-style: oblique;
+        }
+
+        .content-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .pic {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 60%;
+            margin-right: 10px;
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .details {
+            color: white;
+            max-width: 400px;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .projects {
+            font: oblique;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: transparent;
+            margin: 10px;
+            max-width: 200px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+
+
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }         
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+            }
+
+            @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: transparent;
+            margin: 10px;
+            max-width: 200px;
+            overflow: hidden; /* Added overflow property */
+            position: relative; /* Added position property */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out; /* Added transition property */
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover img {
+            transform: scale(1.1); /* Increased scale on hover */
+        }
+        .social-icons{
+            text-align: center;
+        }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1">About Me<hr></h1>
+        <div class="content-container">
+            <div class="pic">
+                <img src="pfp.jpg" alt="Profile Picture">
+            </div>
+            <div class="details">
+                <p>
+                    Hi! I am ISAAC R. GARCIA, a 2nd-year college student major in web technologies.<br>
+                    I can't wait to be a successful programmer someday!<br><br>
+                    Likes: Playing online games [FPS games], Travel, Drinking, Playing airsoft<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="projects">
+        Projects Created by me:
+        <div class="row">
+            <div class="card">
+                <img src="hacks.png" alt="Project 1">
+                <button class="button-85" role="button" onclick="navigateToPage('proj1.html')">1</button>
+
+            </div>
+            <div class="card">
+                <img src="an.png" alt="Project 2">
+                <button class="button-85" role="button" onclick="navigateToPage('proj2.html')">2</button>
+
+
+
+            </div>
+            <div class="card">
+                <img src="cell.png" alt="Project 3">
+                <button class="button-85" role="button" onclick="navigateToPage('proj3.html')">3</button>
+
+            </div>
+            <div class="card">
+                <img src="images.png" alt="Project 4">
+                <button class="button-85" role="button" onclick="navigateToPage('proj4.html')">4</button>
+            </div>
+        </div>
+    </div>
+   <hr>
+   <!-- Social Icons -->
+<div class="social-icons">
+    <a href="https://www.facebook.com/ajdjxh.jaishxbc" target="_blank" class="social-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/1024px-F_icon.svg.png" alt="Facebook" style="width: 25px; height: 25px;">
+    </a>
+    <a href="https://www.instagram.com/iceaintc0ld/" target="_blank" class="social-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram" style="width: 25px; height: 25px;">
+    </a>
+</div>
+
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
